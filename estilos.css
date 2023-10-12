@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: border-box;
+    margin: 0;
+}
+
+:root {
+    --colorPrincipal: #222831;
+    --colorSecundario: #35373a;
+    --colorTerciario: #3ad876;
+    --colorQuaternario: #edf0c5;
+}
+
+body {
+    background: var(--colorPrincipal);
+    min-width: 320px;
+}
+
+header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    background: var(--colorSecundario);
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 150px;
+    transform: scaleX(-1);
+}
+
+.buscar {
+    background-color: transparent;
+    border: 2px solid var(--colorTerciario);
+    padding: .5em 1em;
+    font-size: 1.2em;
+    color: azure;
+    border-radius: 30px;
+}
+
+.buscar:focus {
+    outline: 0;
+    background: var(--colorPrincipal);
+}
+
+.buscar::placeholder {
+    color: ghostwhite;
+}
+
+/* Tarjetas */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    /*Si no caben las cosas en la linea salta a la siguiente */
+    justify-content: center;
+}
+
+.tarjeta {
+    width: 270px;
+    margin: 1em;
+    box-shadow: 0px 0px 6px 0px #EEEEEE;
+    border-radius: 3px;
+    background: var(--colorTerciario);
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+}
+
+.infoPers {
+    color: #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.infoPers h2 {
+    font-size: 1.3em;
+}
+
+.infoPers span {
+    background: var(--colorPrincipal);
+    padding: .2em .3em;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.datos {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--colorQuaternario);
+    padding: 1em;
+    max-height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in;
+    font-weight: bold;
+}
+
+.tarjeta:hover .datos {
+    transform: translateY(0);
+}
+
+@media (max-width: 650px){
+    header {
+        padding: .5em;
+        display: flex;
+        justify-content: space-between;
+        background: var(--colorSecundario);
+        align-items: center;
+    }
+    
+    header img {
+        width: 60px;
+        height: 60px;
+        border-radius: 150px;
+        transform: scaleX(-1);
+    }
+    
+    .buscar {
+        background-color: transparent;
+        border: 2px solid var(--colorTerciario);
+        padding: .5em 1em;
+        font-size: 1em;
+        color: azure;
+        border-radius: 30px;
+    }
+    .tarjeta {
+        width: 200px;
+        margin: 1em;
+        box-shadow: 0px 0px 6px 0px #EEEEEE;
+        border-radius: 3px;
+        background: var(--colorTerciario);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .infoPers h2 {
+        font-size: 1em;
+    }
+    .infoPers span {
+        background: var(--colorPrincipal);
+        padding: .2em .3em;
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: .8em;
+    }
+    .datos {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--colorQuaternario);
+        padding: 1em;
+        max-height: 100%;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in;
+        font-weight: bold;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 450px){
+    .tarjeta {
+        width: 100px;
+        margin: 1em;
+        box-shadow: 0px 0px 6px 0px #EEEEEE;
+        border-radius: 3px;
+        background: var(--colorTerciario);
+        position: relative;
+        overflow: hidden;
+    }
+    .infoPers {
+        color: #EEEEEE;
+        /* display: block; */
+        justify-content: center;
+        padding: .5em;
+        flex-wrap: wrap;
+    }
+    .infoPers h2 {
+        font-size: 1.1em;
+        margin-bottom: .5em;
+    }
+    .infoPers span {
+        background: var(--colorPrincipal);
+        padding: .2em .3em;
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: .7em;
+    }
+
+    header {
+        padding: .5em;
+        display: flex;
+        justify-content: space-between;
+        background: var(--colorSecundario);
+        align-items: center;
+    }
+    
+    header img {
+        width: 60px;
+        height: 60px;
+        border-radius: 150px;
+        transform: scaleX(-1);
+    }
+    
+    .buscar {
+        background-color: transparent;
+        border: 2px solid var(--colorTerciario);
+        padding: .5em 1em;
+        font-size: 1em;
+        color: azure;
+        border-radius: 30px;
+    }
+    .datos {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--colorQuaternario);
+        padding: 1em;
+        max-height: 100%;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in;
+        font-weight: bold;
+        font-size: 10px;
+    }
+    
+    .tarjeta:hover .datos {
+        transform: translateY(0);
+    }
+}
